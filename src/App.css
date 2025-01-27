@@ -32,3 +32,21 @@ button{
   background-color: rgb(125, 195, 19);
   box-shadow: 2px 2px 50px rgb(34,221,231) ;
 }
+
+#speak{
+  width: 100px;
+}
+
+p{
+  font-size: 1.5vmax ;
+  color: white;
+}
+
+.response{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+}

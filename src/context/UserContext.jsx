@@ -1,8 +1,10 @@
-import React, { createContext }  from 'react'
+import React, { createContext, useState }  from 'react'
 import run from '../gemini';
 export const datacontext=createContext()
 
 function UserContext({children}) {
+    let [speaking,setSpeaking] = useState(false)
+    let[prompt, setPrompt]=useState("Listening...")
 
     function speak(text){
         let text_speak = new SpeechSynthesisUtterance(text)
@@ -16,6 +18,7 @@ function UserContext({children}) {
     }
     async function aiResponse(prompt){
        let text= await run(prompt)
+       setPrompt(text)
        speak(text)
     }
 let speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -23,12 +26,16 @@ let recognition = new speechRecognition()
 recognition.onresult=(e)=>{
 let currentIndex = e.resultIndex
 let transcript=e.results [currentIndex][0].transcript
-console.log(transcript);
+setPrompt(transcript)
 aiResponse(transcript)
 }
 
    let value={
-recognition
+recognition,
+speaking,
+setSpeaking,
+prompt,
+setPrompt
    }
   return (
     <div>
