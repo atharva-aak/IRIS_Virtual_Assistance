@@ -16,7 +16,7 @@ function UserContext({children}) {
     }
     async function aiResponse(prompt){
        let text= await run(prompt)
-       console.log(text);
+       speak(text)
     }
 let speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 let recognition = new speechRecognition()
