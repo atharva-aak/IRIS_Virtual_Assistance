@@ -1,0 +1,34 @@
+.main{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  flex-direction: column;
+  gap:10px;
+}
+#vira{
+  height: 70%;
+}
+span{
+  background: linear-gradient(to right, rgb(34,221,231), rgb(237,4,125));
+  font-size: 2vmax;
+  background-clip: text;
+  color: transparent;
+}
+
+button{
+  width: 180px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(125, 195, 19);
+  box-shadow: 2px 2px 50px rgb(34,221,231) ;
+}
