@@ -31,6 +31,7 @@ button{
   border: none;
   background-color: rgb(125, 195, 19);
   box-shadow: 2px 2px 50px rgb(34,221,231) ;
+  cursor: pointer;
 }
 
 #speak{
@@ -38,8 +39,11 @@ button{
 }
 
 p{
-  font-size: 1.5vmax ;
+  font-size: 1.3vmax ;
   color: white;
+  text-align: center;
+  padding: 0px 40px;
+
 }
 
 .response{
@@ -49,4 +53,9 @@ p{
   flex-direction: column;
   gap: 10px;
 
+}
+
+#aigif{
+  width: 50vh;
+  height: 100px;
 }
