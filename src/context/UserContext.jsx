@@ -1,4 +1,5 @@
 import React, { createContext }  from 'react'
+import run from '../gemini';
 export const datacontext=createContext()
 
 function UserContext({children}) {
@@ -13,10 +14,17 @@ function UserContext({children}) {
 
 
     }
+    async function aiResponse(prompt){
+       let text= await run(prompt)
+       console.log(text);
+    }
 let speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 let recognition = new speechRecognition()
 recognition.onresult=(e)=>{
-    console.log(e)
+let currentIndex = e.resultIndex
+let transcript=e.results [currentIndex][0].transcript
+console.log(transcript);
+aiResponse(transcript)
 }
 
    let value={
