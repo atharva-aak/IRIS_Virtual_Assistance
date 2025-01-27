@@ -10,7 +10,7 @@ function App() {
     <div className='main'>
 
       <img src={va} alt="" id ="vira"/>
-      <span>I'm Vera, Your Virtual Assistan</span>
+      <span>I'm Vera, Your Virtual Assistant</span>
       <button onClick={()=>{
         recognition.start()
       }}> Click Here <MdMic /> </button>
