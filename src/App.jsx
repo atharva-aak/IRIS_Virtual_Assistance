@@ -12,7 +12,8 @@ function App() {
     <div className='main'>
 
       <img src={va} alt="" id ="vira"/>
-      <span>I'm Vera, Your Virtual Assistant</span>
+      <span>I'm Iris, Your Virtual Assistant</span>
+      <span>Made By: Atharva Kalbande</span>
       {!speaking? 
       
       <button onClick={()=>{
