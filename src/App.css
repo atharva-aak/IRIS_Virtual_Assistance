@@ -10,7 +10,10 @@
   gap:10px;
 }
 #vira{
-  height: 70%;
+  height: 60%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 span{
   background: linear-gradient(to right, rgb(34,221,231), rgb(237,4,125));
